@@ -1,2 +1,2 @@
-FROM mysql
-ENV MYSQL_ROOT_PASSWORD password
+from mysql
+env MYSQL_ROOT_PASSWORD: listagemeventos
