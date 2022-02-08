@@ -9,8 +9,8 @@ module.exports = (app) => {
 });
 
 app.get('/', function(req,res) {
-    res.render('login');
-    console.log('Acessou a página de login...');
+    res.render('Inicio');
+    console.log('Acessou a página de início...');
 });
 
 };
