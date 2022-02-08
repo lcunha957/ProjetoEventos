@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const exphbs  = require("express-handlebars");
+const exphbs  = require('express-handlebars');
 const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
