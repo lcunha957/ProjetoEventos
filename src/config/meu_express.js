@@ -1,16 +1,11 @@
 const express = require("express");
 const app = express();
 const path = require("path")
-const hbs = require("hbs")
 const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
 const {sequelize} = require('./database');
 
-hbs = exphbs.create({ /* config */ });
-app.set('views', path.join(__dirname))
-app.engine ('handlebars', handlebars({defaultLayout: 'main'}));
-app.set ('view engine', 'handlebars');
 
 app.use(bodyParser.json());
 app.use(
