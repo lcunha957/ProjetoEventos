@@ -86,11 +86,11 @@
                 <div class="input-group mb-2">
                   <div class="input-group-prepend">
                     <%if(temCarrinho>0){%> 
-                      <button class="btn btn-primary" type="button">Finalizar</button>
+                      <button class="btn btn-primary" id="btnInserir" type="button">Finalizar</button>
                     <%}else{%>
-                      <a href="/login" class="btn btn-primary" type="button">Cadastre-se para finalizar a sua compra!</a>
+                      <a href="/login" class="btn btn-primary" id="btnEdCarrinho" type="button">Cadastre-se para finalizar a sua compra!</a>
                     <%}%>
-                    <button class="btn btn-secondary" type="button" disabled> Valor total: R$<%-valorTotalF%> </button>
+                    <button class="btn btn-secondary" id="btnAtualiza" type="button" disabled> Valor total: R$<%-valorTotalF%> </button>
                   </div>
                 </div>
               </div>
