@@ -7,6 +7,7 @@ const morgan = require('morgan');
 const {sequelize} = require('./database');
 
 var hbs = exphbs.create({ /* config */ });
+app.set('views', path.join(__dirname))
 app.engine ('handlebars', handlebars({defaultLayout: 'main'}));
 app.set ('view engine', 'handlebars');
 
