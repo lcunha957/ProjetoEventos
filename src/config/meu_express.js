@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
-const handlebars = require ("express-handlebars");
+const exphbs  = require("express-handlebars");
 const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
 const {sequelize} = require('./database');
 
+var hbs = exphbs.create({ /* config */ });
 app.engine ('handlebars', handlebars({defaultLayout: 'main'}));
 app.set ('view engine', 'handlebars');
 
