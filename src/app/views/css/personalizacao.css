@@ -1,0 +1,171 @@
+body {
+    background-color:palegreen;
+    font-family: Arial, verdana;
+}
+
+h1 {
+    color:mediumvioletred; 
+    margin-left: 40px;
+}
+
+h3 {
+    color:darkslateblue;
+    font-style: italic;
+    margin-left: 100px;
+}
+
+table, tr, td {
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.navbar, .navbar-expand-lg,.navbar-light, .bg-light,.navbar-collapse, .justify-content-end,
+.navbar-brand,.nav-item,.navbar-toggler,.navbar-toggler-icon,.fixed-top,.nav-item {
+    background: size 300px;
+    background-color:paleturquoise;
+    background-position: center;
+    color:black;
+}
+
+#frmContainer {
+	width: 500px;
+    justify-content: flex-end!important;
+}
+
+label {
+   display: inline-block;
+   width: 150px;
+   margin: 20px;
+   
+}
+
+form, input, .input-padrão {
+    width: 100%;
+}
+
+#btnInclusao {
+	float: right;
+    border-radius: 50px;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+#btnValida {
+margin-left: 150px;
+background-color:orange;
+color:sienna; 
+border-radius: 50px;
+}
+
+#login, #email, #nome, #idProduto, #nomeProduto, #idItPed, #idPedido, #codigoItemPed, #codigoProdutoItPed, #valorTotalCompraItPed, #numPedido, #codigoItemItPed, #codigoPedidoItPed{
+ padding-bottom: 15px; 
+ padding-left: 10px;
+ padding-right:5px;
+ padding-top: 15px;
+ font-size: 15px;
+ border-radius: 50px;
+}
+
+#senha, #senha_clie, #CPF_clie, #codigoProduto, #quantidadeProduto, #numeroPedido, #dataPedido, #idCliePed, #qtdProdutoItPed, #valorTotalPed, #codigoProdutoItPed, #nomeProdutoItPed {
+    padding-bottom: 15px; 
+    padding-left: 15px;
+    padding-right: 225px;
+    padding-top: 15px;
+    font-size: 15px;
+    border-radius: 50px;
+}
+
+#btnAddCarrinho {
+    margin-left: 10px;
+    background-color:darkgreen;
+    padding-bottom: 20px; 
+    padding-left: 15px;
+    padding-right: 25px;
+    padding-top: 15px;
+    color:white; 
+    border-radius: 50px;
+   }
+
+#escritaCarrinho, #editarCarrinho, #retiraCarrinho {
+    color:azure; 
+}
+
+
+#btnInserir {
+margin-left: 150px;
+background-color:indigo;
+color: cornsilk; 
+border-collapse: collapse;
+border-radius: 50px;
+}
+
+#btnEdCarrinho {
+margin-left: 10px;
+background-color:goldenrod;
+padding-bottom: 20px; 
+padding-left: 15px;
+padding-right: 25px;
+padding-top: 15px;
+color:white; 
+border-radius: 50px;
+   }
+
+.cabecalho {text-align: center;}
+
+#btnExcluiCarrinho{
+margin-left: 10px;
+background-color:darkred;
+padding-bottom: 20px; 
+padding-left: 15px;
+padding-right: 25px;
+padding-top: 15px;
+color:white; 
+border-radius: 50px;    
+}
+
+#btnAtualiza {
+margin-left: 150px;
+background-color:tomato;
+color:midnightblue; 
+border-radius: 50px;
+
+}
+
+h5 {
+ color:black;
+  font-size:50px;   
+}
+
+p{
+color:purple;
+font-size: medium;    
+}
+
+#btnIns {
+margin-left: 150px;
+background-color:firebrick;
+color: cornsilk; 
+border-collapse: collapse;
+border-radius: 50px;    
+}
+
+#btnInsercao {
+margin-left:150px;
+background-color:lightsalmon;
+color:midnightblue;
+border-collapse: collapse;
+border-radius:50px;
+}
+
+
+#btnInsercao2{
+margin-left:150px;
+background-color:violet;
+color:purple;
+border-collapse: collapse;
+border-radius:50px;    
+}
