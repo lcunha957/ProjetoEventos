@@ -22,4 +22,4 @@ sequelize.query("SELECT * from CadastroUsuario", function (err, rows, fields) {
     console.log("Erro ao realizar a consulta");
   }
 });
-module.exports = connection;
+module.exports = sequelize;
