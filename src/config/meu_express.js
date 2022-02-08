@@ -1,10 +1,8 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const {sequelize} = require('./database');
+const path = require ("path");
 
-
-app.use(bodyParser.json());
 app.use(
 bodyParser.urlencoded({
     extended: true,
@@ -15,10 +13,10 @@ const rotas = require("../app/rotas/rotas");
 
 rotas(app);
 
-app.use("/estatico", express.static("src/app/views/usuarios"));
+app.use("/estatico", express.static("src/app/views"));
+app.use("/imagem",express.static("src/app/views/imagens"));
+app.set("views", path.join(__dirname,'../app/views'));
+app.set("view engine", "ejs");
 
-app.get("/add-usuario", function(req,res){
-res.send("Formulário para cadastrar usuários")
-});
 
 module.exports = app;
