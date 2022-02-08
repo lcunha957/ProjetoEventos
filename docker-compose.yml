@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+
+bd:
+  image: mysql
+  container_name: eager_williams
+  command: --default-authentication-plugin=mysql_native_password
+  environment:
+  MYSQL_ROOT_PASSWORD: listagemeventos
+  volumes: ./app/bd/data:var/lib/mysql
+  ports: "3306:3306"
+  restart: always
+
+
+app:
+ build:
+  context: "./app"
+  dockerfile: Dockerfile-Node
+  container_name: node-image 
+  restart: always
+  volumes: ./app:/home/node/app
+  ports: "9001:9001"
+  depends on: bd
