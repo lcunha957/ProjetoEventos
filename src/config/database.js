@@ -1,25 +1,21 @@
 const mysql = require("mysql");
-const Sequelize = require ("sequelize");
 
-const sequelize = new Sequelize('database', 'username', 'password', {
+const connection = mysql.createConnection({
     host: "localhost",
+    user: "root",
+    password: " ",
     dialect : "mysql",
     operatorsAliases: false,
-    password: "listagemeventos",
-    database: "listagemeventos"
+    database: "ProjetoEventosBD"
   });
   
-  sequelize.authenticate().then(function(){
-        console.log("CONEXÃO com banco de dados listagemeventos OK!");
-      }).catch(function(error){
-        console.log("Erro na CONEXÃO com o banco de dados listagemeventos!"+ error);
-  });
+connection.connect(function(error){
+if (error){
+  console.log ("Banco de dados:" + database + "deu erro!" + error);
+}
+else {
+  console.log ("Banco de dados:" + database + "conectado com sucesso!" );
+}
 
-sequelize.query("SELECT * from CadastroUsuario", function (err, rows, fields) {
-  if (err) {
-    console.log("Resultado:", rows);
-  } else {
-    console.log("Erro ao realizar a consulta");
-  }
 });
-module.exports = sequelize;
+module.exports = connection;
