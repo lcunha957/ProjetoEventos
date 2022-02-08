@@ -15,7 +15,7 @@ const sequelize = new Sequelize('database', 'username', 'password', {
         console.log("Erro na CONEXÃO com o banco de dados listagemeventos!"+ error);
   });
 
-connection.query("SELECT * from CadastroUsuario", function (err, rows, fields) {
+sequelize.query("SELECT * from CadastroUsuario", function (err, rows, fields) {
   if (err) {
     console.log("Resultado:", rows);
   } else {
