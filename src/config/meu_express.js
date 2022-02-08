@@ -11,7 +11,7 @@ bodyParser.urlencoded({
 
 const rotas = require("../app/rotas/rotas");
 rotas(app);
-
+app.use('/caminho',express.static('src/app/views/css'));
 app.use("/estatico", express.static("src/app/views"));
 app.use('/caminhoImagem1',express.static('src/app/views/imagens'));
 app.use('/caminhoImagem2',express.static('src/app/views/imagens'));
