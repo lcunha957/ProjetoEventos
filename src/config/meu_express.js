@@ -1,8 +1,6 @@
 const express = require("express");
 const app = express();
-const path = require("path")
 const bodyParser = require("body-parser");
-const morgan = require('morgan');
 const {sequelize} = require('./database');
 
 
@@ -12,7 +10,6 @@ bodyParser.urlencoded({
     extended: true,
 })
 );
-
 
 const rotas = require("../app/rotas/rotas");
 
