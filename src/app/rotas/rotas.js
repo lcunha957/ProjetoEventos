@@ -7,9 +7,9 @@ const eventosCont = new EventosControlador();
 const HistoricoControlador = require('../controladores/historico_controllers');
 const historicoCont = new HistoricoControlador();
 
-module.exports = (aplicacao) => {
+module.exports = (app) => {
 
-        aplicacao.use((req, res, next) => {
+        app.use((req, res, next) => {
         res.header('Access-Control-Allow-Origin', '*');
         res.header('Access-Control-Allow-Origin', "http://localhost");
         res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -19,12 +19,12 @@ module.exports = (aplicacao) => {
 
     /****************  ROTAS  ****************/
 
-    aplicacao.get('/login', function(req,res) {
+    app.get('/login', function(req,res) {
         res.render('login.ejs');
         console.log('Acessou a página de login...');
     })
     
-    aplicacao.get('/cadastrar', function(req,res) {
+    app.get('/cadastrar', function(req,res) {
         res.render('cadastro.ejs');
         console.log('Acessou  a página de cadastro...');
     })
@@ -35,17 +35,17 @@ module.exports = (aplicacao) => {
     });
      
 
-    aplicacao.get('/eventos', eventosCont.mostraEventos());
+    app.get('/eventos', eventosCont.mostraEventos());
     
-    aplicacao.get('/historico', historicoCont.exibeEventosCarrinho());
+    app.get('/historico', historicoCont.exibeEventosCarrinho());
 
-    aplicacao.get('/logout', historicoCont.excluirEventosDoHistorico());
+    app.get('/logout', historicoCont.excluirEventosDoHistorico());
 
-    aplicacao.post('/insertEventosHistorico', eventosCont.eventoNoHistorico());
+    app.post('/insertEventosHistorico', eventosCont.eventoNoHistorico());
 
-    aplicacao.post('/validaUsuarios', usuarioCont.validaAcessoUsuario());
+    app.post('/validaUsuarios', usuarioCont.validaAcessoUsuario());
 
-    aplicacao.post('/insertUsuarios', usuarioCont.inserirNovoUsuario());
+    app.post('/insertUsuarios', usuarioCont.inserirNovoUsuario());
 }
 
 
