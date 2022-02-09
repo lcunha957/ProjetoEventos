@@ -34,6 +34,17 @@ module.exports = (app) => {
         console.log('Acessou a página de início...');
     });
      
+    app.get ('/eventos', function(req,res)
+    {
+        res.render ('Eventos.ejs');
+        console.log("Acessou a página de eventos...");
+    });
+    
+    app.get ('/historico', function(req,res)
+    {
+        res.render ('Historico.ejs');
+        console.log("Acessou a página de historico...");
+    });
 
     app.get('/eventos', eventosCont.mostraEventos());
     
