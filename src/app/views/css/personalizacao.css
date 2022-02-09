@@ -51,7 +51,7 @@ img {
   border-radius: 50px;
 }
 
-#btnValida {
+#btnValida,#showPassword {
 margin-left: 150px;
 background-color:orange;
 color:sienna; 

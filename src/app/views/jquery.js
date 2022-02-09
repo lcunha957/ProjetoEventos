@@ -18,13 +18,13 @@ $(document).ready(function(){
         passwordField.attr('type', 'text');
  
         // Change the Text on the show password button to Hide
-        $(this).val('Hide');
+        $(this).val('Ocultar');
     } else {
         // If the password field type is not a password field then set it to password
         passwordField.attr('type', 'password');
  
         // Change the value of the show password button to Show
-        $(this).val('Show');
+        $(this).val('Mostrar');
     }
   });
 });
