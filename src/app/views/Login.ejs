@@ -47,19 +47,22 @@
         <header class="cabecalhoFundo"></header>
         <form action="/ValidaUsuarios" method="post">
           <input type="hidden" id="id" name="id" />
-          <table width="30%">
-          <tr>
-            <td><label for=“email">Email:</label></td>
-            <td><input type="text" id="email" name="email" required size="100" placeholder = "seuemail@universidade.br" /></td>
-          </tr>
-          <tr>
-            <td><label for="senha">Senha:</label></td>
-            <td><input type="text" id="senha" name="senha" required size="100" placeholder = "asenha123@" /></td>
-          </tr>
-          </table>
-          <br>
-          <button type="submit" id = "btnInsercao"  class="btn btn-secondary btn-lg"> Logar no sistema </button>
-      </form>
+            <div class="form-group">
+              <label for="email">Endereço de email: </label>
+              <input type="email" class="form-control" name="email" required id="email" aria-describedby="emailHelp" placeholder="seuemail@universidade.br" size="100">
+              <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+            </div>
+            <div class="form-group">
+              <label for="senha">Senha: </label>
+              <input type="password" class="form-control" name="senha" id="senha" placeholder="asenha123@" size="100">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Estou ciente da LGPD e sobre os termos de uso desse site</label>
+            </div>
+            <button type="submit" id = "btnInsercao"  class="btn btn-secondary btn-lg"> Logar no sistema </button>
+          </form>
+
      
 </body>
       
