@@ -49,7 +49,7 @@ INSERT INTO CadastroUsuario VALUES
 
 INSERT INTO Eventos VALUES 
 ('01Phy', 'phyton.png','Treinamento de Phyton', 'Nesse treinamento você aprenderá do básico ao avançado na linguagem Phyton', 390.00, 500, null),
-('02Del', 'delphi.jpeg','Treinamento de Delphi', 'Nesse treinamento você aprenderá do básico ao avançado na linguagem Delhpi', 450.00, 300, null),
+('02Del', 'delphi.jpeg','Treinamento de Delphi', 'Nesse treinamento você aprenderá do básico ao avançado na linguagem Delphi', 450.00, 300, null),
 ('03TyS','typescript.jpg','Treinamento de TypeScript', 'Nesse treinamento você aprenderá do básico ao avançado na linguagem TypeScript', 550.00, 400, null),
 ('04Asp','aspnet.png','Treinamento de ASP.NET', 'Nesse treinamento você aprenderá do básico ao avançado na linguagem ASP.NET', 580.00, 350, null),
 ('05Lin','linux.jfif','Treinamento de Linux', ' Nesse treinamento você aprenderá do básico ao avançado no sistema operacional Linux', 950.00, 600, null);

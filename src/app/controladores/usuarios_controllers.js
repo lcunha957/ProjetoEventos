@@ -7,7 +7,7 @@ class UsuariosControllers
         return function(req,res) {
             const usuarioDB = new Usuarios_bd(db);
             usuarioDB.incluirUsuarios(req.body)
-                .then(res.redirect('/'))
+                .then(res.redirect('/Eventos'))
                 .catch(erro => console.log(erro));
         }
     }
@@ -33,7 +33,7 @@ class UsuariosControllers
                 .catch(erro => { 
                     console.log("Select RESULTADO = " + erro);
                     console.log('Usuário inexistente!');
-                    res.redirect('/login');
+                    res.redirect('/cadastro');
                 })
         }
     } 

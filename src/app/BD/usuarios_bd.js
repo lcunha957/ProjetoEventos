@@ -53,7 +53,9 @@ class Usuarios_bd
                 console.log(erro);
                 return reject('O usuário não pode ser incluído em nosso banco de dados');
             }
-            else { return resolve();  }
+            else { 
+                alert ('Usuário incluído com sucesso!');
+                return resolve();  }
         }) 
     })
 }
