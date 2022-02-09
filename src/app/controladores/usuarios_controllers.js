@@ -7,7 +7,7 @@ class UsuariosControllers
         return function(req,res) {
             const usuarioDB = new Usuarios_bd(db);
             usuarioDB.incluirUsuarios(req.body)
-                .then(res.redirect('/Eventos'))
+                .then(res.redirect('/eventos'))
                 .catch(erro => console.log(erro));
         }
     }

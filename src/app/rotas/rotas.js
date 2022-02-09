@@ -20,17 +20,17 @@ module.exports = (app) => {
     /****************  ROTAS  ****************/
 
     app.get('/login', function(req,res) {
-        res.render('login.ejs');
+        res.render('Login.ejs');
         console.log('Acessou a página de login...');
     })
     
     app.get('/cadastrar', function(req,res) {
-        res.render('cadastro.ejs');
+        res.render('Cadastro.ejs');
         console.log('Acessou  a página de cadastro...');
     })
 
     app.get('/', function(req,res) {
-        res.render('Inicio');
+        res.render('Inicio.ejs');
         console.log('Acessou a página de início...');
     });
      
