@@ -43,10 +43,7 @@ form, input, .input-padrão {
     width: 100%;
 }
 
-#btnInclusao {
-	float: right;
-    border-radius: 50px;
-}
+
 
 img {
   width: 80px;
@@ -61,7 +58,7 @@ color:sienna;
 border-radius: 50px;
 }
 
-#login, #email, #nome, #idProduto, #nomeProduto, #idItPed, #idPedido, #codigoItemPed, #codigoProdutoItPed, #valorTotalCompraItPed, #numPedido, #codigoItemItPed, #codigoPedidoItPed{
+#login, #email, #nome, #id_evento, #nome_evento, #idHist, #id_evnt, #idUsuario,  #valor_total {
  padding-bottom: 15px; 
  padding-left: 10px;
  padding-right:5px;
