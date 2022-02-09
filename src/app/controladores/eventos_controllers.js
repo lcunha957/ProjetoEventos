@@ -26,4 +26,4 @@ class EventosControllers
             }
     }
 }
-module.exports = ProdutosControllers;
+module.exports = EventosControllers;

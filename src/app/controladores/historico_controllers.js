@@ -1,7 +1,7 @@
 const Eventos_bd = require('../BD/eventos_bd');
 var db = require('../../config/database');
 
-class CarrinhoControllers
+class HistoricoControllers
 {
     exibeEventosCarrinho() {
         return function (req, res) {
