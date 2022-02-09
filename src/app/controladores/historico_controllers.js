@@ -7,7 +7,7 @@ class HistoricoControllers
         return function (req, res) {
             const eventoDB = new Eventos_bd(db);
             eventoDB.selecionaEventoDoCarrinho(function (err, resultadosEvento) {
-                eventoDB.selecionaEvento(function (err, resultadosHistorico) {
+                eventoDB.selecionaEvento(function (err, resultadosHistorico, {eventosSelecionados:{}}) {
                     var historico_c = resultadosHistorico[0].historico;
                     var valorTotalP = 0;
                     var valorTotalF = 0;

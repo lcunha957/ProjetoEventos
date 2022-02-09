@@ -12,7 +12,7 @@ class EventosControllers
                     var historico_c = resultadosHistorico[0].historico;
                     var eventos = resultadosEvento[0].eventos;
                     console.log('Acessou eventos...')
-                    res.render('Eventos.ejs',{
+                    res.render('Eventos.ejs', {eventos:{}}, {
                         eventos: resultadosEvento,
                         temHistorico: historico_c
                     })

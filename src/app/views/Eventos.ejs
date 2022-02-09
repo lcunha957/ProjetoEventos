@@ -56,10 +56,10 @@
     </script>
 
   <div class="mid">
-    <div class="row row-cols-2 row-cols-md-4  ">
-      <%for(var i =0; i<eventos.length; i++) {%>
-        <form action="/insertEventosHistorico" method="post">
-          <div class="col mb-4">
+      <div class="row row-cols-2 row-cols-md-4  ">
+        <%for(var i =0; i<eventos.length; i++) {%>
+          <form action="/insertEventosHistorico" method="post">
+            <div class="col mb-4">
             <div class="card">
               <p class = "card-title">Foto do evento:</p>
               <img src="/imagens/<%-eventos[i].foto%>" class="card-img-top">
