@@ -19,6 +19,21 @@ class Usuarios_bd
         })
      }
 
+     criaHistorico(){
+        return new Promise((resolve,reject) => {
+            var sqlConsUsuarios = "Insert into  historico (`qtdProduto`, `valorTotal`) VALUES (1,1)";
+            this._db.query(sqlConsUsuarios, function (erro,resultado) {
+                if (resultado.length > 0) {
+                    var dados = resultado.length;
+                    resolve(dados);
+                }
+                else { 
+                  return reject('O histórico não foi inserido no banco de dados');
+                }
+            })
+         })
+    }
+
      selectUsuarioPorEmail(email, callback) {
         var sqlCons = "Select idUsuario from cadastrousuario where email='" + email + "'";
         console.log(sqlCons);
