@@ -9,12 +9,13 @@ const connection = mysql.createConnection({
     database: "ProjetoEventosBD"
   });
   
-connection.connect(function(error){
-if (error){
-  console.log ("Banco de dados:" + database + "deu erro!" + error);
+connection.connect(function(err){
+if (err){
+  console.error('erro de conexão com o banco de dados: ' + err.stack);
 }
 else {
-  console.log ("Banco de dados:" + database + "conectado com sucesso!" );
+  console.log('Banco de dados conectado com o ID: ' + connection.threadId);
+ 
 }
 
 });

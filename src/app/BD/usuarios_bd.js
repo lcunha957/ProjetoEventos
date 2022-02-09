@@ -7,7 +7,7 @@ class Usuarios_bd
         return new Promise((resolve,reject) => {
            var sqlConsUsuarios = " select * from cadastrousuario where email='" + email + "' and senha='" + senha + "'";
            console.log("Select montado = " + sqlConsUsuarios);
-        this._db.query(sqlConsUsuarios, function (erro,resultado) {
+        this._db.query(sqlConsUsuarios, function (err,resultado) {
                if (resultado.length > 0) {
                    var dados = resultado.length;
                    resolve(dados);
@@ -22,7 +22,7 @@ class Usuarios_bd
      criaHistorico(){
         return new Promise((resolve,reject) => {
             var sqlConsUsuarios = "Insert into  historico (`qtdProduto`, `valorTotal`) VALUES (1,1)";
-            this._db.query(sqlConsUsuarios, function (erro,resultado) {
+            this._db.query(sqlConsUsuarios, function (err,resultado) {
                 if (resultado.length > 0) {
                     var dados = resultado.length;
                     resolve(dados);
@@ -48,8 +48,8 @@ class Usuarios_bd
        return new Promise((resolve,reject) => {
         var sqlInsUsuario = "Insert into cadastrousuario (cpf_cnpj, nome_completo, empresa_faculdade, email, senha) VALUES('" + usuario.cpf_cnpj + "','" + usuario.nome_completo + "','" + usuario.empresa_faculdade + "','" + usuario.email + "','" + usuario.senha + "');";
         console.log("INSERT MONTADO = " + sqlInsUsuario);
-        this._db.query(sqlInsUsuario, function (erro) {
-            if (erro) {
+        this._db.query(sqlInsUsuario, function (err) {
+            if (err) {
                 console.log(erro);
                 return reject('O usuário não pode ser incluído em nosso banco de dados');
             }

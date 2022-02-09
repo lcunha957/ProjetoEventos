@@ -23,15 +23,15 @@ class UsuariosControllers
                         .then (dados => {
                             console.log('O histórico apareceu com sucesso');
                         })
-                        .catch(erro => { 
+                        .catch(err => { 
                             console.log('O historico deu erro');
                         })
                         console.log('O usuário existe!');
                         res.redirect('/eventos');
                     }
                 })  
-                .catch(erro => { 
-                    console.log("Select RESULTADO = " + erro);
+                .catch(err => { 
+                    console.log("Select RESULTADO = " + err);
                     console.log('Usuário inexistente!');
                     res.redirect('/cadastrar');
                 })

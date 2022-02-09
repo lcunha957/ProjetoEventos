@@ -6,8 +6,8 @@ class HistoricoControllers
     exibeEventosCarrinho() {
         return function (req, res) {
             const eventoDB = new Eventos_bd(db);
-            eventoDB.selecionaEventoDoCarrinho(function (error, resultadosEvento) {
-                eventoDB.selecionaEvento(function (error, resultadosHistorico) {
+            eventoDB.selecionaEventoDoCarrinho(function (err, resultadosEvento) {
+                eventoDB.selecionaEvento(function (err, resultadosHistorico) {
                     var historico_c = resultadosHistorico[0].historico;
                     var valorTotalP = 0;
                     var valorTotalF = 0;
@@ -28,8 +28,8 @@ class HistoricoControllers
     excluirEventosDoHistorico() {
         return function (req, res) {
             const eventoDB = new Eventos_bd(db);
-            eventoDB.deletaHistorico(function (error, resultadosEvento) {
-            eventoDB. selecionaHistoricoCarrinho(function (error, resultadosHistorico) {
+            eventoDB.deletaHistorico(function (err, resultadosEvento) {
+            eventoDB. selecionaHistoricoCarrinho(function (err, resultadosHistorico) {
                         var historico_c = resultadosHistorico[0].historico;
                         res.render('historico.ejs',{
                             produtosSelecionados: resultadosEvento,

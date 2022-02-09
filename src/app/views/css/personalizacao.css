@@ -58,7 +58,7 @@ color:sienna;
 border-radius: 50px;
 }
 
-#login, #email, #nome, #id_evento, #nome_evento, #idHist, #id_evnt, #idUsuario,  #valor_total {
+#login, #email, #nome, #id_evento, #nome_evento, #idHist, #id_evnt, #idUsuario,  #valor_total, #cpf_cnpj, #empresa_faculdade, #nome_completo {
  padding-bottom: 15px; 
  padding-left: 10px;
  padding-right:5px;

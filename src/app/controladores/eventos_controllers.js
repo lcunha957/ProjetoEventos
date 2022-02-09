@@ -7,8 +7,8 @@ class EventosControllers
     mostraEventos() {
         return function (req, res) {
             const eventoDB = new Eventos_bd(db);
-            eventoDB.selecionaEvento(function (error, resultadosEvento) {
-                eventoDB.selecionaHistoricoCarrinho(function (error, resultadosHistorico) {
+            eventoDB.selecionaEvento(function (err, resultadosEvento) {
+                eventoDB.selecionaHistoricoCarrinho(function (err, resultadosHistorico) {
                     var historico_c = resultadosHistorico[0].historico;
                     console.log('Acessou eventos...')
                     res.render('eventos.ejs',{

@@ -2,9 +2,9 @@ class Eventos_bd {
     constructor(db){ this._db = db; }
     insereEventoNoCarrinho(evento) {
         var sqlCons = "INSERT INTO historico (idUsu, idEvnt, foto_Evnt, nome_Evnt, preco_evnt, qtd_ing) VALUES ('" + evento.idUsuario + "','" + evento.id_evento +  "','" + evento.foto_Evnt + "','" + evento.nome_Evnt + "','" + evento.preco_Evnt + "','" + evento.qtd_ing + "')";
-        this._db.query(sqlCons, function (erro) {
-            if (erro) {
-                console.log(erro);
+        this._db.query(sqlCons, function (err) {
+            if (err) {
+                console.log(err);
                 return reject('A inserção no carrinho deu erro!');
             }
             else { 
@@ -17,8 +17,8 @@ class Eventos_bd {
         var sqlCons = 'Select id_evento, foto_evento, nome_evento, descricao_evento, preco_evento, ingressos, quantidade_ing from eventos';
         this._db.query(
             sqlCons,
-            (erro, resultados) =>
-                callback(erro, resultados)
+            (err, resultados) =>
+                callback(err, resultados)
         )
     }
 
@@ -26,8 +26,8 @@ class Eventos_bd {
         var sqlCons = 'Select g.id_evento, g.foto_evento, g.nome_evento, g.descricao_evento, g.preco_evento, j.qtd_ing, (g.preco_evento * j.qtd_ing) as totalDoEvento from eventos g inner join historico j ON c.idEvnt = p.id_evento';
         this._db.query(
             sqlCons,
-            (erro, resultados) =>
-                callback(erro, resultados)
+            (err, resultados) =>
+                callback(err, resultados)
         )
     }
 
