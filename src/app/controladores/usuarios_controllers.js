@@ -21,19 +21,19 @@ class UsuariosControllers
                     if (dados > 0) {
                         usuarioDB.criaHistorico()
                         .then (dados => {
-                            console.log('O historico deu erro!');
-                        })
-                        .catch(erro => { 
                             console.log('O histórico apareceu com sucesso');
                         })
+                        .catch(erro => { 
+                            console.log('O historico deu erro');
+                        })
                         console.log('O usuário existe!');
-                        res.redirect('/');
+                        res.redirect('/eventos');
                     }
                 })  
                 .catch(erro => { 
                     console.log("Select RESULTADO = " + erro);
                     console.log('Usuário inexistente!');
-                    res.redirect('/cadastro');
+                    res.redirect('/cadastrar');
                 })
         }
     } 
