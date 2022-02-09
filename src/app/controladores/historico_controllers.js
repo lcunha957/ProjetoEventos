@@ -31,7 +31,7 @@ class HistoricoControllers
             eventoDB.deletaHistorico(function (err, resultadosEvento) {
             eventoDB. selecionaHistoricoCarrinho(function (err, resultadosHistorico) {
                         var historico_c = resultadosHistorico[0].historico;
-                        res.render('historico.ejs',{
+                        res.render('Historico.ejs',{
                             produtosSelecionados: resultadosEvento,
                             valorTotalF: 0,
                             temHistorico: historico_c 

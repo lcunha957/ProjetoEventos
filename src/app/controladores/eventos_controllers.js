@@ -11,7 +11,7 @@ class EventosControllers
                 eventoDB.selecionaHistoricoCarrinho(function (err, resultadosHistorico) {
                     var historico_c = resultadosHistorico[0].historico;
                     console.log('Acessou eventos...')
-                    res.render('eventos.ejs',{
+                    res.render('Eventos.ejs',{
                         eventos: resultadosEvento,
                         temHistorico: historico_c
                     })
