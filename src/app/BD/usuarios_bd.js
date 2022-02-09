@@ -58,8 +58,7 @@ class Usuarios_bd
     })
 }
 
-
-}
+} 
 
 
 module.exports = Usuarios_bd;
