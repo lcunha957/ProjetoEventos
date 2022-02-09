@@ -1,13 +1,14 @@
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: " ",
-    dialect : "mysql",
-    operatorsAliases: false,
-    database: "ProjetoEventosBD"
-  });
+  host: "localhost",
+  user: "root",
+  password: "password",
+  dialect: "mysql",
+  database: "ProjetoEventosBD",
+  operatorsAliases: false,
+  port: 4800,
+});
   
 connection.connect(function(err){
 if (err){
