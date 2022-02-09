@@ -15,7 +15,7 @@ class UsuariosControllers
     validaAcessoUsuario()
     {
         return function(req,res) {
-            const usuarioDB = new Usuarios_db(db);
+            const usuarioDB = new Usuarios_bd(db);
             usuarioDB.selectUsuario(req.body.email,req.body.senha)
                 .then (dados => {
                     if (dados > 0) {
